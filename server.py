@@ -1,5 +1,4 @@
-import time
-from datetime import datetime
+from heroku import time
 
 from flask import Flask, request, abort
 
@@ -25,16 +24,11 @@ def hello():
 
 @app.route("/status")
 def status():
-    dt = datetime.now()
     return {
         'status': True,
         'name': 'Skillbox Messenger',
         'time': time.time(),
-        'time1': time.asctime(),
-        'time2': dt,
-        'time3': str(dt),
-        'time4': dt.isoformat(),
-        'time5': dt.strftime('%d %b %H:%M:%S'),
+        'time1': time.asctime()
     }
 
 
