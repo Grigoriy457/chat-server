@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+client.py
+first.py
+messenger.py
+*.ui
+receiver.py
+sender.py
